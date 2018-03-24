@@ -16,3 +16,7 @@ To close panel click on X on the right top of the panel.
 Please, report bugs on github's page of the project: [github.com/robben1234/EmotePanel](https://github.com/robben1234/EmotePanel/issues)
 
 Curse.com page: [emotepanel](https://wow.curseforge.com/projects/emotepanel)
+
+Ingame screenshot: 
+
+![screenshot](https://github.com/robben1234/EmotePanel/blob/master/screenshot.jpg "screenshot")
