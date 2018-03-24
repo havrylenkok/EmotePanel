@@ -1,0 +1,7 @@
+## Interface: 70350
+## Title: EmotePanel
+## Author: robben1234
+## Version: 0.1
+
+emotepanel.lua
+emotepanel.xml

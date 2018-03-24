@@ -1,0 +1,545 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+	<Frame name="emotepanel_main_frame" parent="UIParent" inherits="BasicFrameTemplate"
+		hidden="true" movable="true" enableMouse="true">
+		<Size><AbsDimension x="1055" y="578" /></Size>
+		<Anchors><Anchor point="CENTER" /></Anchors>
+		<Scripts>
+			<OnLoad>
+				self:RegisterForDrag("LeftButton");
+				print('EmotePanel is loaded.')
+			</OnLoad>
+			<OnDragStart>self:StartMoving();</OnDragStart>
+ 			<OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+		</Scripts>
+		<Layers><Layer>
+			<FontString name="$parentTitle" inherits="GameFontNormal" text="EmotePanel" hidden="false">
+				<Anchors>
+					<Anchor point="TOP"><Offset><AbsDimension x="0" y="-5" /></Offset></Anchor>
+				</Anchors>
+			</FontString>
+		</Layer></Layers>
+		<Frames>
+			<!-- START Column 1 x 24 -->
+			<!-- El 1 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="agree"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-23"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 2 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="amaze"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-46"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 3 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="angry"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-69"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 4 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="apologize"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-92"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 5 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="applaud"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-115"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 6 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="attacktarget"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-138"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 7 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="bark"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-161"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 8 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="bashful"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-184"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 9 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="beckon"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-207"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 10 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="beg"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-230"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 11 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="belch"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-253"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 12 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="bite"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-276"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 13 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="bleed"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-299"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 14 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="blink"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-322"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 15 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="blow"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-345"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 16 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="blush"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-368"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 17 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="boggle"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-391"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 18 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="bonk"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-414"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 19 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="bored"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-437"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 20 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="bounce"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-460"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 21 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="bow"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-483"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 22 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="bravo"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-506"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 23 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="brandish"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-529"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 24 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="brb"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-552"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="5" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- END Column 1 x 24 -->
+			<!-- Column 2 x 24 -->
+			<!-- El 1 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="burp"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-23"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 2 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="bye"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-46"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 3 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="cackle"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-69"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 4 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="calm"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-92"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 5 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="cat"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-115"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 6 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="charge"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-138"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 7 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="cheer"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-161"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 8 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="chew"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-184"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 9 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="chicken"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-207"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 10 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="chuckle"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-230"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 11 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="clap"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-253"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 12 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="cold"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-276"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 13 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="comfort"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-299"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 14 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="commend"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-322"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 15 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="confused"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-345"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 16 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="congrats"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-368"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 17 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="cough"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-391"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 18 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="cower"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-414"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 19 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="crack"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-437"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 20 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="cringe"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-460"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 21 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="cry"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-483"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 22 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="cuddle"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-506"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 23 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="curious"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-529"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 24 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="curtsey"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-552"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="110" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- END Column 2 x 24 -->
+			<!-- Column 3 x 24 -->
+			<!-- El 1 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="dance"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-23"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 2 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="ding"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-46"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 3 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="disappointed"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-69"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 4 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="doh"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-92"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 5 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="doom"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-115"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 6 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="drink"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-138"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 7 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="drool"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-161"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 8 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="duck"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-184"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 9 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="eat"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-207"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 10 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="excited"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-230"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 11 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="facepalm"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-253"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 12 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="farewell"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-276"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 13 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="fart"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-299"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 14 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="love"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-322"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 15 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="fear"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-345"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 16 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="feast"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-368"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 17 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="fidget"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-391"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 18 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="flap"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-414"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 19 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="flee"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-437"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 20 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="flex"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-460"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 21 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="flirt"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-483"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 22 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="flop"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-506"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 23 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="followme"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-529"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 24 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="food"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-552"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="215" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- END Column 3 x 24 -->
+			<!-- Column 4 x 24 -->
+			<!-- El 1 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="frown"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-23"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 2 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="gasp"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-46"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 3 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="gaze"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-69"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 4 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="giggle"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-92"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 5 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="glad"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-115"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 6 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="glare"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-138"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 7 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="gloat"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-161"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 8 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="golfclap"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-184"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 9 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="goodbye"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-207"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 10 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="greet"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-230"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 11 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="grin"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-253"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 12 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="groan"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-276"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 13 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="grovel"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-299"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 14 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="growl"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-322"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 15 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="guffaw"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-345"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 16 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="hail"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-368"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 17 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="happy"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-391"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 18 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="healme"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-414"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 19 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="hello"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-437"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 20 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="helpme"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-460"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 21 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="hi"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-483"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 22 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="highfive"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-506"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 23 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="hug"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-529"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 24 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="hungry"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-552"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="320" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- END Column 4 x 24 -->
+			<!-- Column 5 x 24 -->
+			<!-- El 1 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="impatient"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-23"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 2 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="incoming"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-46"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 3 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="insult"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-69"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 4 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="introduce"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-92"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 5 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="love"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-115"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 6 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="jk"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-138"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 7 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="kiss"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-161"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 8 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="kneel"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-184"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 9 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="knuckles"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-207"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 10 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="laugh"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-230"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 11 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="lavish"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-253"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 12 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="lay"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-276"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 13 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="lick"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-299"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 14 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="lie"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-322"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 15 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="listen"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-345"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 16 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="lol"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-368"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 17 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="lost"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-391"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 18 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="love"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-414"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 19 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="mad"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-437"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 20 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="massage"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-460"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 21 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="moan"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-483"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 22 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="mock"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-506"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 23 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="moo"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-529"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 24 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="moon"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-552"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="425" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- END Column 5 x 24 -->
+			<!-- Column 6 x 24 -->
+			<!-- El 1 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="mountspecial"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-23"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 2 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="mourn"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-46"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 3 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="no"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-69"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 4 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="nod"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-92"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 5 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="nosepick"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-115"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 6 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="oom"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-138"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 7 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="panic"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-161"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 8 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="party"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-184"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 9 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="pat"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-207"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 10 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="peer"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-230"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 11 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="peon"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-253"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 12 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="pick"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-276"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 13 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="pizza"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-299"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 14 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="plead"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-322"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 15 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="point"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-345"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 16 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="poke"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-368"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 17 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="ponder"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-391"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 18 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="pounce"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-414"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 19 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="praise"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-437"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 20 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="pray"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-460"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 21 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="purr"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-483"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 22 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="puzzled"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-506"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 23 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="question"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-529"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 24 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="raise"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-552"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="530" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- END Column 6 x 24 -->
+			<!-- Column 7 x 24 -->
+			<!-- El 1 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="rasp"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-23"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 2 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="ready"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-46"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 3 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="read"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-69"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 4 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="rear"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-92"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 5 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="regret"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-115"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 6 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="roar"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-138"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 7 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="rofl"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-161"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 8 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="rolleyes"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-184"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 9 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="rude"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-207"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 10 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="salute"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-230"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 11 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="scared"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-253"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 12 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="scratch"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-276"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 13 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="sexy"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-299"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 14 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="shake"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-322"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 15 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="shimmy"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-345"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 16 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="shindig"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-368"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 17 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="shiver"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-391"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 18 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="shoo"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-414"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 19 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="shrug"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-437"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 20 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="shy"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-460"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 21 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="sigh"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-483"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 22 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="silly"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-506"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 23 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="slap"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-529"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 24 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="sleep"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-552"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="635" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- END Column 7 x 24 -->
+			<!-- Column 8 x 24 -->
+			<!-- El 1 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="smell"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-23"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 2 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="smile"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-46"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 3 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="smirk"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-69"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 4 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="snarl"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-92"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 5 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="snicker"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-115"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 6 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="sniff"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-138"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 7 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="snub"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-161"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 8 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="sob"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-184"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 9 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="soothe"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-207"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 10 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="sorry"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-230"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 11 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="spit"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-253"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 12 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="spoon"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-276"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 13 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="stare"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-299"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 14 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="stink"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-322"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 15 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="strong"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-345"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 16 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="strut"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-368"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 17 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="surprised"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-391"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 18 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="surrender"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-414"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 19 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="talk"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-437"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 20 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="talkex"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-460"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 21 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="talkq"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-483"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 22 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="tap"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-506"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 23 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="taunt"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-529"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 24 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="tease"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-552"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="740" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- END Column 8 x 24 -->
+			<!-- Column 9 x 24 -->
+			<!-- El 1 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="thanks"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-23"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 2 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="think"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-46"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 3 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="thirsty"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-69"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 4 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="threat"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-92"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 5 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="tickle"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-115"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 6 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="tired"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-138"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 7 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="train"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-161"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 8 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="ty"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-184"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 9 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="veto"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-207"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 10 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="victory"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-230"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 11 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="violin"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-253"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 12 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="volunteer"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-276"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 13 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="wait"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-299"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 14 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="wave"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-322"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 15 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="weep"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-345"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 16 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="welcome"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-368"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 17 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="whine"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-391"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 18 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="whistle"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-414"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 19 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="whoa"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-437"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 20 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="wicked"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-460"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 21 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="wink"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-483"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 22 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="woot"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-506"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 23 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="work"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-529"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 24 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="wrath"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-552"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="845" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- END Column 9 x 24 -->
+			<!-- Column 10 x 5 -->
+			<!-- El 1 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="yawn"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-23"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="950" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 2 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="yay"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-46"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="950" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 3 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="yes"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-69"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="950" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 4 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="yw"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-92"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="950" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- El 5 -->
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="yield"><Size x="100" y="21" /><Anchors><Anchor point="TOP" ><Offset><AbsDimension x="0" y="-115"></AbsDimension></Offset></Anchor><Anchor point="LEFT"><Offset><AbsDimension x="950" y="0"></AbsDimension></Offset></Anchor></Anchors><Scripts><OnClick>doEmote(self);</OnClick></Scripts></Button>
+			<!-- END Column 10 x 5 -->
+		</Frames>
+	</Frame>
+
+
+	<!-- Minimap button -->
+	<Button name="emotepanel_MinimapButton" parent="Minimap" enableMouse="true"
+		movable="true" hidden="false">
+		<Size><AbsDimension x="33" y="33" /></Size>
+		<Anchors><Anchor point="LEFT"><Offset><AbsDimension x="-19" y="40"></AbsDimension></Offset></Anchor></Anchors>
+		<Frames>
+			<Frame name="emotepanel_MinimapButton_DraggingFrame" hidden="true">
+				<Scripts>
+					<OnUpdate>
+						MyMod_MinimapButton_DraggingFrame_OnUpdate()
+					</OnUpdate>
+				</Scripts>
+			</Frame>
+		</Frames>
+		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+		<Scripts>
+			<OnLoad>
+				this:RegisterForClicks("LeftButtonUp","RightButtonUp")
+				this:RegisterForDrag("LeftButton","RightButton")
+			</OnLoad>
+			<OnDragStart>
+				this:LockHighlight()
+			</OnDragStart>
+			<OnDragStop>
+				this:UnlockHighlight()
+			</OnDragStop>
+			<OnClick>
+				emotepanel_main_frame:Show();
+			</OnClick>
+		</Scripts>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="emotepanel_MinimapButton_Icon" file="Interface\Icons\achievement_character_nightelf_female">
+					<Size>
+						<AbsDimension x="21" y="21"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="7" y="-6"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<Texture file="Interface\Minimap\MiniMap-TrackingBorder">
+					<Size>
+						<AbsDimension x="56" y="56"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+	</Button>
+ </Ui>
